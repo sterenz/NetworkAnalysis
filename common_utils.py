@@ -48,6 +48,7 @@ def convert_to_int(value):
             else:
                 return None  # Unable to parse
         else:  # Regular number
-            return np.int64(value)
-    except:
-        return None  # Unable to convert
+            return int(value)
+    except Exception:
+        print('-- ERR: value not valid')
+        raise
